@@ -1,18 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Route, Link } from 'react-router-dom';
+import '@ajusa/lit/dist/lit.css';
+import '@ajusa/lit/dist/util.css';
+import './index.css';
 import './App.css';
+import Home from './containers/home'
+import Checklist from './containers/checklist'
+import Parking from './containers/parking'
+import Shopping from './containers/shopping'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <div className="c row">
+            <Link className="ph2" to="/">Home</Link>
+            <Link className="ph2" to="/checklist">Checklist</Link>
+            <Link className="ph2" to="/parking">Parking</Link>
+            <Link className="ph2" to="/shopping">Shopping</Link>
+          </div>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/checklist" component={Checklist} />
+        <Route exact path="/parking" component={Parking} />
+        <Route exact path="/shopping" component={Shopping} />
       </div>
     );
   }
