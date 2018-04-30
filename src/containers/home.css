@@ -1,0 +1,11 @@
+.HomeBody {
+  margin-top: -20px;
+}
+
+.carousel {
+  width: 100%;
+}
+
+.carousel::before {
+  margin-bottom: 0;
+}
