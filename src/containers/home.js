@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
-import { Row, Col, Jumbotron } from 'react-bootstrap';
+import { Row, Col, Jumbotron, Button } from 'react-bootstrap';
 import './home.css';
 
 const HomeCarousel = () => (
-  <Jumbotron>
+  <Jumbotron bsClass="jumbotron home-jumbotron">
     <div className="container text-center">
-      <h1>Tools to help you bike commute in Manila.</h1>
+      <h2>Get your bike on with Bike Paps.</h2>
+      <p>Cycling to work in Manila saves time, saves money, and gives you free exercise. Bike Paps is a collection of tools that makes it easier for you to get into urban cycling. It's time to take back the time we lose every time we get into traffic.</p>
       <p>
-        This is a simple hero unit, a simple jumbotron-style component for calling
-        extra attention to featured content or information.
+        <i className="em em-bicyclist home-jumbotron-emoji"></i>
+        <i className="em em-mountain_bicyclist home-jumbotron-emoji"></i>
+        <i className="em em-bike home-jumbotron-emoji"></i>
       </p>
+      <Button bsSize="large" bsStyle="primary" style={{ marginRight: 10 + 'px' }}>Learn more</Button>
+      <Button bsSize="large">FAQs</Button>
     </div>
   </Jumbotron>
 );
@@ -19,7 +23,6 @@ const Faqs = () => (
     <h1 className="text-center">So, Why Urban Cycling?</h1>
     <Row>
       <Col xs={6}>
-        <h1>It's Cheaper</h1>
         <p>I saved a lot.</p>
       </Col>
       <Col xs={6}>
